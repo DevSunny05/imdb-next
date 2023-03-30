@@ -17,7 +17,7 @@ const Header = () => {
             <div className='flex items-center space-x-5 '>
                 <DarkMode/>
                 <Link href={'/'}>
-                    <h2 className='text-2xl'>
+                    <h2 className='text-2xl mr-2'>
                         <span className='font-bold bg-amber-500 py-1 px-2 rounded-lg'>IMDb</span>
                         <span className='text-xl hidden sm:inline-block ml-1'>Clone</span>
                     </h2>
