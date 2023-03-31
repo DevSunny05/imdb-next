@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { AiFillHeart } from 'react-icons/ai'
 
 const MoviePage =async ({params}) => {
     const movieId=params.id
@@ -18,7 +19,14 @@ const MoviePage =async ({params}) => {
                 >
             </Image>
             <div className='p-2'>
-                <h2 className='text-lg mb-3'>{movie.title || movie.name}</h2>
+                <h2 className='text-xl mb-3 font-bold mt-2'>{movie.title || movie.name}</h2>
+                <p className='mb-3 text-lg'><span className='font-semibold mr-1'>Overview:</span>{movie.overview}</p>
+                <p className='flex items-center '>
+                    <span className='font-semibold mr-1'>Released date:</span>
+                    {movie.first_air_date || movie.release_date}
+                    <span className='font-semibold mr-1 ml-4'>Rating:</span>
+                    <AiFillHeart className='text-red-500 ml-3 mr-1'/>{movie.vote_count}{" "}
+                </p>
             </div>
         </div>
     </div>
