@@ -5,11 +5,11 @@ import {AiFillHeart} from 'react-icons/ai'
 
 const Card = ({result}) => {
   return (
-    <div className='cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 group sm:m-2 transition-shadow duration-200'>
+    <div className='cursor-pointer m-4 border  border-slate-400 shadow-md hover:shadow-slate-400 sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 group sm:m-2 transition-shadow duration-200'>
         <Link href={`/movie/${result.id}`}>
             <Image src={`https://image.tmdb.org/t/p/original/${result.backdrop_path || result.poster_path }`}
             width={500} height={300} alt={'movie image'}
-            className='sm:rounded-t-lg group-hover:opacity-80 transition duration-200'
+            className='rounded-t-lg sm:rounded-t-lg group-hover:opacity-80 transition duration-200'
             // placeholder='blur'
             // blurDataURL=''
             style={{maxWidth:'100%',height:'auto'}}
